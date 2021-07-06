@@ -1,0 +1,50 @@
+html {
+	font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Set box-sizing:border-box for all elements
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+// Images responsives by default
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+fieldset {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+iframe {
+	max-width: 100%;
+}

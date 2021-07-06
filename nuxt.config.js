@@ -1,5 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  server: {     
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },
   head: {
     title: 'Nutrition-Facts',
     htmlAttrs: {
@@ -17,6 +21,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/scss/style.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
