@@ -1,10 +1,10 @@
 <template>
-  <div class="site">
+  <div>
     <h1>Nutrition Facts</h1>
     <!-- <ImportExport /> -->
     <div class="site__content">
       <FoodLineItem />
-      <button>Add food</button>
+      <nuxt-link to="/FoodRegister">Ajouter un ingredient</nuxt-link>
     </div>
   </div>
 </template>

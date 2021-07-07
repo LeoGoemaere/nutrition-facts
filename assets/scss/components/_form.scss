@@ -1,0 +1,48 @@
+
+.form__row {
+  margin-bottom: 15px;
+}
+
+.form__flex {
+  display: flex;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  margin-bottom: 5px;
+  display: block;
+  font-size: 17px;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid $color-gray-70;
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+.form__select {
+  padding: 17px 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid $color-gray-70;
+  color: $color-black;
+}
+
+.form__input--error {
+  border-bottom: 2px solid red;
+}
+
+.form__input--valid ,
+.form__textarea--valid {
+  border-bottom: 2px solid green;
+}

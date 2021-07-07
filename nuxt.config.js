@@ -34,11 +34,18 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/style-resources',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
+
+  styleResources: {
+    scss: [
+      './assets/scss/abstracts/_variables.scss'
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
