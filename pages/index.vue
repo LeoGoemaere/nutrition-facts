@@ -1,7 +1,11 @@
 <template>
   <div class="site">
     <h1>Nutrition Facts</h1>
-    <importExport />
+    <!-- <ImportExport /> -->
+    <div class="site__content">
+      <FoodLineItem />
+      <button>Add food</button>
+    </div>
   </div>
 </template>
 

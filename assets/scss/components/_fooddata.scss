@@ -1,0 +1,50 @@
+.fooddata {
+  height: 35px;
+  display: flex;
+  flex: 1;
+  &:first-child {
+    margin-right: 10px;
+  }
+  &:last-child {
+    margin-left: 10px;
+  }
+}
+
+.fooddata__input-container {
+  display: flex;
+  position: relative;
+  flex: 1;
+}
+
+.fooddata__input {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #b3b3b3;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.fooddata__label {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.fooddata__info {
+  padding: 0 5px;
+  line-height: 35px;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #b3b3b3;
+  border-radius: 0 4px 4px 0;
+  border-right: 0;
+  position: relative;
+}

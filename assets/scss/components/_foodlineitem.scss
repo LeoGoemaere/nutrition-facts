@@ -1,0 +1,19 @@
+.foodlineitem {
+  padding-top: 5px;
+  padding-bottom: 12px;
+  position: relative;
+  border-bottom: 1px solid #dedede;
+}
+
+.foodlineitem__top {
+  margin-bottom: 5px;
+}
+
+.foodlineitem__name {
+  font-size: 17px;
+  color: #000;
+}
+
+.foodlineitem__data {
+  display: flex;
+}
