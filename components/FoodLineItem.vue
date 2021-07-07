@@ -1,18 +1,25 @@
 <template>
   <div class="foodlineitem">
     <div class="foodlineitem__top">
-      <p class="foodlineitem__name">Riz</p>
+      <p class="foodlineitem__name">{{ name }}</p>
+      <button class="foodlineitem__edit" @click="$router.push({ name: 'FoodRegister', query: { id } })">Edit</button>
     </div>
     <div class="foodlineitem__data">
-      <FoodData :isCooked="false" />
-      <FoodData :isCooked="true" />
+      <FoodData :value="raw" :isCooked="false" />
+      <FoodData :value="cooked" :isCooked="true" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FoodLineItem'
+  name: 'FoodLineItem',
+  props: {
+    id: { type: String },
+    name: { type: String },
+    raw: { type: Number },
+    cooked: { type: Number },
+  }
 }
 </script>
 
