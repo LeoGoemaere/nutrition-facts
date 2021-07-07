@@ -7,8 +7,14 @@ export const mutations = {
   SET_APPDATA(state, data) {
     state.appData = data;
   },
-  ADD_FOOD(state, data) {
-    state.foods.push(data);
+  ADD_FOOD(state, food) {
+    const isEdition = state.foods.some(data => data.id === food.id);
+    if (isEdition) {
+      const foodIndex = state.foods.findIndex(data => data.id === food.id);
+      state.foods.splice(foodIndex, 1, food);
+    } else {
+      state.foods.push(food);
+    }
   }
 }
 

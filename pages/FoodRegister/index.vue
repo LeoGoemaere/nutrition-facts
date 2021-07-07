@@ -43,18 +43,21 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import { v4 as uuidv4 } from 'uuid';
+import deepCopy from '@/assets/js/helpers/deepCopy';
+
 export default {
   name: 'FoodRegister',
   data() {
     return {
       form: {
         id: null,
-        name: 'riz',
+        name: null,
         brand: null,
         quantities: {
-          raw: 100,
-          cooked: 200
+          raw: null,
+          cooked: null
         },
         calories: null,
         proteins: null,
@@ -64,7 +67,14 @@ export default {
     }
   },
   mounted() {
-    this.form.id = uuidv4();
+    if (this.$route.query.id) {
+      // Edit food
+      const food = deepCopy(this.getFoods).find(food => food.id === this.$route.query.id);
+      this.form = food;
+    } else {
+      // New food
+      this.form.id = uuidv4();
+    }
   },
   methods: {
     submitData() {
@@ -74,6 +84,9 @@ export default {
     }
   },
   computed: {
+    ...mapGetters([
+      'getFoods'
+    ]),
     isNameValid() {
       return this.form.name !== null && this.form.name.length > 0;
     },
