@@ -3,10 +3,21 @@
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  background-color: $color-primary;
-  color: $color-white;
   font-size: 17px;
   margin-top: 15px;
+}
+
+.button--primary {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.button--aslink {
+  width: auto;
+  background-color: transparent;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .button--disabled {

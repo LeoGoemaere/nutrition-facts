@@ -33,7 +33,7 @@
     </div>
     <button
       @click="submitData"
-      class="button"
+      class="button button--primary"
       :class="{ 'button--disabled': !isFormValid }"
     >Save</button>
   </div>

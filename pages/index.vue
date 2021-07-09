@@ -10,7 +10,7 @@
         :raw="food.quantities.raw"
         :cooked="food.quantities.cooked"
       />
-      <button class="button" @click="$router.push({ name: 'foodRegister' })">Ajouter un ingredient</button>
+      <button class="button button--primary" @click="$router.push({ name: 'foodRegister' })">Ajouter un ingredient</button>
     </div>
   </div>
 </template>

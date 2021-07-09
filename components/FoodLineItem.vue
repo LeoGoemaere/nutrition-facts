@@ -13,6 +13,7 @@
     </div>
     <div class="foodlineitem__data">
       <FoodData :value="rawValue" @input="convertCookedFromRaw" :isCooked="false" />
+      <i class="fas fa-exchange-alt"></i>
       <FoodData :value="cookedValue" @input="convertRawFromCooked" :isCooked="true" />
     </div>
     <Notification
