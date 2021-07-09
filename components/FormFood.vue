@@ -42,10 +42,11 @@
 <script>
 import { mapGetters } from 'vuex';
 import { v4 as uuidv4 } from 'uuid';
-import deepCopy from '@/assets/js/helpers/deepCopy';
+import utilsMixin from '@/assets/js/mixins/utilsMixin';
 
 export default {
   name: 'FormFood',
+  mixins: [ utilsMixin ],
   props: {
     foodId: String
   },
@@ -69,7 +70,7 @@ export default {
   mounted() {
     if (this.foodId) {
       // Edit food
-      const food = deepCopy(this.getFoods).find(food => food.id === this.foodId);
+      const food = this.deepCopy(this.getFoods).find(food => food.id === this.foodId);
       this.form = food;
     } else {
       // New food

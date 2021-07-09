@@ -5,8 +5,8 @@
       <button class="foodlineitem__edit" @click="$router.push({ name: 'foodModifier', query: { id } })">Edit</button>
     </div>
     <div class="foodlineitem__data">
-      <FoodData :value="raw" :isCooked="false" />
-      <FoodData :value="cooked" :isCooked="true" />
+      <FoodData :value="rawValue" @input="convertCookedFromRaw" :isCooked="false" />
+      <FoodData :value="cookedValue" @input="convertRawFromCooked" :isCooked="true" />
     </div>
   </div>
 </template>
@@ -19,6 +19,30 @@ export default {
     name: { type: String },
     raw: { type: Number },
     cooked: { type: Number },
+  },
+  data() {
+    return {
+      rawValue: null,
+      cookedValue: null
+    }
+  },
+  mounted() {
+    this.rawValue = this.raw;
+    this.cookedValue = this.cooked;
+  },
+  methods: {
+    convertCookedFromRaw(newValue) {
+      const oldRawValue = this.rawValue;
+      const newRawValue = Number(newValue);
+      this.rawValue = newRawValue;
+      this.cookedValue = (newRawValue * this.cookedValue) / oldRawValue;
+    },
+    convertRawFromCooked(newValue) {
+      const oldCookedValue = this.cookedValue;
+      const newCookedValue = Number(newValue);
+      this.cookedValue = newCookedValue;
+      this.rawValue = (newCookedValue * this.rawValue) / oldCookedValue;
+    }
   }
 }
 </script>
