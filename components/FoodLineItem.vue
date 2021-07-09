@@ -2,7 +2,7 @@
   <div class="foodlineitem">
     <div class="foodlineitem__top">
       <p class="foodlineitem__name">{{ name }}</p>
-      <button class="foodlineitem__edit" @click="$router.push({ name: 'FoodRegister', query: { id } })">Edit</button>
+      <button class="foodlineitem__edit" @click="$router.push({ name: 'foodModifier', query: { id } })">Edit</button>
     </div>
     <div class="foodlineitem__data">
       <FoodData :value="raw" :isCooked="false" />

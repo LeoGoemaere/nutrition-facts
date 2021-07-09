@@ -11,7 +11,7 @@
         :cooked="food.quantities.cooked"
         :id="food.id"
       />
-      <nuxt-link to="/FoodRegister">Ajouter un ingredient</nuxt-link>
+      <nuxt-link to="/foodRegister">Ajouter un ingredient</nuxt-link>
     </div>
   </div>
 </template>
