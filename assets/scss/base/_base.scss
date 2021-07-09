@@ -4,6 +4,10 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+body {
+	padding-bottom: 65px; /* Navigation bar height */
+}
+
 // Set box-sizing:border-box for all elements
 * {
 	&,
