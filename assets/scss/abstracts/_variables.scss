@@ -1,11 +1,20 @@
 // http://www.color-blindness.com/color-name-hue/
 $color-orient: #1C4366;
+$danger-color: #a72e2e;
+
 
 $color-primary: $color-orient;
 
+$carbs-color: #d68644;
+$proteins-color: #48bb6a;
+$fats-color: rgb(204, 48, 90);
+$calories-color: rgb(103, 134, 252);
+
 // Neutral colors
 $color-black: black;
+$color-gray-87: hsl(0, 0%, 87%);
 $color-gray-70: hsl(0, 0%, 70%); // #b3b3b3
+$color-gray-50: hsl(0, 0%, 50%);
 $color-white: white;
 
 // Text color

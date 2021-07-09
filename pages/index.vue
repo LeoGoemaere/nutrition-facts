@@ -6,12 +6,11 @@
       <FoodLineItem
         v-for="food in getFoods"
         :key="food.id"
-        :name="food.name"
+        :foodData="food"
         :raw="food.quantities.raw"
         :cooked="food.quantities.cooked"
-        :id="food.id"
       />
-      <nuxt-link to="/foodRegister">Ajouter un ingredient</nuxt-link>
+      <button class="button" @click="$router.push({ name: 'foodRegister' })">Ajouter un ingredient</button>
     </div>
   </div>
 </template>

@@ -15,6 +15,10 @@ export const mutations = {
     } else {
       state.foods.push(food);
     }
+  },
+  DELETE_FOOD(state, food) {
+    const foodIndex = state.foods.findIndex(data => data.id === food.id);
+    state.foods.splice(foodIndex, 1);
   }
 }
 
@@ -24,6 +28,9 @@ export const actions = {
   },
   addFood({ commit }, data) {
     commit('ADD_FOOD', data);
+  },
+  deleteFood({ commit }, data) {
+    commit('DELETE_FOOD', data);
   }
 }
 

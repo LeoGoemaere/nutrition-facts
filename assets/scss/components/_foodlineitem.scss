@@ -9,6 +9,7 @@
   margin-bottom: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .foodlineitem__name {
@@ -16,10 +17,49 @@
   color: #000;
 }
 
+.foodlineitem__edit,
+.foodlineitem__delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
 .foodlineitem__edit {
-  margin-left: 10px;
+  color: $color-gray-50;
+}
+
+.foodlineitem__delete {
+  color: $danger-color;
 }
 
 .foodlineitem__data {
   display: flex;
+}
+
+.foodlineitem__nutriments {
+  display: flex;
+  align-items: center;
+}
+
+.foodlineitem__nutriment {
+  + .foodlineitem__nutriment {
+    &::before {
+      content: "|";
+      color: $color-gray-70;
+      margin: 0 3px;
+    }
+  }
+  &.carbs {
+    color: $carbs-color;
+  }
+  &.proteins {
+    color: $proteins-color;
+  }
+  &.fats {
+    color: $fats-color;
+  }
+  &.calories {
+    color: $calories-color;
+  }
 }

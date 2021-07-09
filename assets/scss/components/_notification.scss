@@ -1,0 +1,59 @@
+.notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10px 10px;
+  z-index: 20;
+  transform: translateY(100%);
+  transition: transform .2s ease-out;
+}
+.notification--active {
+  transform: translateY(0);
+  transition: transform .2s ease-out;
+}
+.notification__infos-container {
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.notification__description {
+  padding: 10px 15px;
+  border-bottom: 1px solid $color-gray-87;
+}
+.notification__button {
+  background-color: transparent;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 20px;
+}
+.notification__button--danger {
+  color: $danger-color;
+}
+.notification__button--success {
+  // TODO
+}
+.notification__button--cancel {
+  color: $color-primary;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.notification__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  z-index: 5;
+}
+
+.notification__overlay--active {
+  display: block;
+}
+
