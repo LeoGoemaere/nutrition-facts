@@ -1,9 +1,16 @@
 <template>
   <div>
-    <input type="file" value="import" ref="file">
-    <button @click="importFile">Import</button>
-    <button @click="exportFile">Export</button>
-    {{this.getAppData}}
+    <div class="settings__row">
+      <label for="" class="form__label">Importer des données</label>
+      <div class="settings__content">
+        <input class="form__input" type="file" value="import" ref="file">
+        <button class="button button--primary settings__button" @click="importFile">Import</button>
+      </div>
+    </div>
+    <div class="settings__row">
+      <p class="form__label">Exporter les données</p>
+      <button class="button button--primary settings__button" @click="exportFile">Export</button>
+    </div>
   </div>
 </template>
 
@@ -20,14 +27,13 @@ export default {
         const self = this;
         fileReader.onload = (e) => {
           const data = JSON.parse(e.target.result)
-          // TODO: Rename actions
-          self.$store.dispatch('setAppData', data)
+          self.$store.dispatch('setFoods', data)
         }
         fileReader.readAsText(file.item(0));
       }
     },
     exportFile() {
-      const blob = new Blob([JSON.stringify(data)], {type : 'application/json'})
+      const blob = new Blob([JSON.stringify(this.getFoods)], {type : 'application/json'})
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = 'nutritionFacts-export';
@@ -36,12 +42,12 @@ export default {
   },
   computed: {
     ...mapGetters({
-      getAppData: 'getAppData'
+      getFoods: 'getFoods'
     })
   }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  @import '@/assets/scss/components/settings';
 </style>

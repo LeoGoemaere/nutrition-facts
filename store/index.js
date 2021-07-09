@@ -4,8 +4,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_APPDATA(state, data) {
-    state.appData = data;
+  SET_FOODS(state, foods) {
+    state.foods = foods;
   },
   ADD_FOOD(state, food) {
     const isEdition = state.foods.some(data => data.id === food.id);
@@ -23,8 +23,8 @@ export const mutations = {
 }
 
 export const actions = {
-  setAppData({ commit }, data) {
-    commit('SET_APPDATA', data)
+  setFoods({ commit }, data) {
+    commit('SET_FOODS', data);
   },
   addFood({ commit }, data) {
     commit('ADD_FOOD', data);
@@ -35,9 +35,6 @@ export const actions = {
 }
 
 export const getters = {
-  getAppData: (state) => {
-    return state.appData;
-  },
   getFoods: (state) => {
     return state.foods;
   }
