@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="settings__row">
-      <label for="" class="form__label">Importer des données</label>
+      <label for="" class="form__label">Import datas</label>
       <div class="settings__content">
         <input class="form__input" type="file" value="import" ref="file">
         <button class="button button--primary settings__button" @click="importFile">Import</button>
       </div>
     </div>
     <div class="settings__row">
-      <p class="form__label">Exporter les données</p>
+      <p class="form__label">Export datas</p>
       <button class="button button--primary settings__button" @click="exportFile">Export</button>
     </div>
   </div>

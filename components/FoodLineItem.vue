@@ -20,8 +20,9 @@
       :isActive="isDeleteNotificationOpen"
       @canceled="closeDeleteNotification"
       @validated="deleteLineItem"
-      :validateButton="{ text: 'Supprimer', modifier: 'danger' }"
-      :cancelButton="{ text: 'Annuler' }"
+      :validateButton="{ text: 'Delete', modifier: 'danger' }"
+      :cancelButton="{ text: 'Cancel' }"
+      description="Delete the food."
     />
   </div>
 </template>

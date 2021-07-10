@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     displayFoodInfos() {
-      return this.isCooked ? 'cuit' : 'cru';
+      return this.isCooked ? 'cooked' : 'raw';
     }
   }
 }

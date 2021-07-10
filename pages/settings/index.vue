@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Préférences</h1>
+    <h1>Settings</h1>
     <div class="site__content">
       <ImportExport />
     </div>
