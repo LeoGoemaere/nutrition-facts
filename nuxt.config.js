@@ -6,7 +6,7 @@ export default {
   //   host: '0.0.0.0', // default: localhost   
   // },
   target: 'static',
-  outer: {
+  router: {
     base: 'nutrition-facts'
   },
   head: {
