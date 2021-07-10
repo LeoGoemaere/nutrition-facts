@@ -1,10 +1,5 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // For test on mobile
-  // server: {     
-  //   port: 8000, // default: 3000     
-  //   host: '0.0.0.0', // default: localhost   
-  // },
   target: 'static',
   router: {
     base: '/nutrition-facts/'
@@ -17,7 +12,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'apple-mobile-web-app-capable', content:'yes' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
