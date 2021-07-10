@@ -7,7 +7,7 @@ export default {
   // },
   target: 'static',
   router: {
-    base: 'nutrition-facts'
+    base: '/nutrition-facts/'
   },
   head: {
     title: 'Nutrition-Facts',
