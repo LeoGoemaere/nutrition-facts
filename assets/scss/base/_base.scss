@@ -52,3 +52,9 @@ fieldset {
 iframe {
 	max-width: 100%;
 }
+
+input {
+	&:focus {
+		outline: none;
+	}
+}
