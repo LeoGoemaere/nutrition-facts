@@ -22,6 +22,13 @@ export default {
     ]
   },
 
+  pwa: {
+    manifest: {
+      name: 'Nutrition Facts app',
+      display: 'standalone'
+    }
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/scss/style.scss'
@@ -38,6 +45,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/pwa'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
