@@ -4,7 +4,8 @@
       <input :value="roundValue(value)" @change="$emit('input', $event.target.value)" class="fooddata__input" type="number">
       <label class="fooddata__label">g</label>
     </div>
-    <span class="fooddata__info">{{displayFoodInfos}}</span>
+    <span v-if="!this.isCooked" class="fooddata__info"><i class="far fa-snowflake"></i></span>
+    <span v-else class="fooddata__info"><i class="fas fa-fire"></i></span>
   </div>
 </template>
 
