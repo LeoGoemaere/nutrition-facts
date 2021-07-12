@@ -1,0 +1,9 @@
+{
+  "name": "Nutrition Facts app",
+  "short_name": "Nutrition-Facts",
+  "icons": [],
+  "start_url": "/nutrition-facts/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
